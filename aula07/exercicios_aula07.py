@@ -36,3 +36,32 @@
 # lista_teste = [1, 2, 2, 3, 4, 5, 5, 5, 6, 7, 8, 8]
 # qtd_valores_unicos = contar_valores_unicos(lista_teste)
 # print(f"A quantidade de valores únicos é: {qtd_valores_unicos} e a quantidade total de itens é {len (lista_teste)}")
+
+### Exercício 4
+# Converter Celsius para Fahrenheit em uma Lista
+# def converter_Celsius_para_Fahrenheit(lista: list[float]) -> list[float]:
+#     return [(valor * 9/5) + 32 for valor in lista]
+
+# lista_temperatura_celsius = [0, 25, 21.2, 48.7]
+# print(converter_Celsius_para_Fahrenheit(lista_temperatura_celsius))
+
+### Exercício 5
+# Calcular Desvio Padrão de uma Lista
+# def calcular_desvio_padrao(lista: list[float]) -> float:
+#     media_lista = sum(lista) / len(lista)
+#     variancia = (sum((valor - media_lista)**2 for valor in lista)) / len(lista)
+#     desvio_padrao = variancia ** (1/2)
+#     return desvio_padrao
+
+
+# lista_teste = [10, 40, 25, 55, 61, 102.3, 22.5, 99.9]
+# print(calcular_desvio_padrao(lista_teste))
+
+### Exercício 6
+# Encontrar Valores Ausentes em uma Sequência
+def encontrar_valores_ausentes(lista: list[int]) -> int:
+    lista_completa = set(range(min(lista), max(lista) + 1))
+    return sorted(list(lista_completa - set(lista)))
+
+lista_teste = [1, 2, 2, 4, 4, 5, 6, 6, 7, 9]
+print(encontrar_valores_ausentes(lista_teste))
